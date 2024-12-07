@@ -20,6 +20,7 @@ import { ChevronDownIcon} from '@heroicons/react/20/solid';
 import Image from "next/image";
 import OwnIpInfoWidget from "@/app/_components/OwnIpInfoWidget";
 import {Route} from "@/app/_utils/routes";
+import Link from "next/link";
 
 interface NavigationItem {
     name: string;
@@ -54,7 +55,7 @@ function MainLayout({children}: Readonly<{
             <header className="relative isolate z-10 bg-gray-900">
                 <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
                     <div className="flex lg:flex-1">
-                        <a href="/" className="-m-1.5 p-1.5">
+                        <Link href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">DevToys</span>
                             <Image
                                 className="h-8 w-auto"
@@ -64,7 +65,7 @@ function MainLayout({children}: Readonly<{
                                 height={38}
                                 priority
                             />
-                        </a>
+                        </Link>
                     </div>
                     <div className="flex lg:hidden">
                         <button
@@ -126,7 +127,7 @@ function MainLayout({children}: Readonly<{
                     <DialogPanel
                         className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
-                            <a href="/" className="-m-1.5 p-1.5">
+                            <Link href="/" className="-m-1.5 p-1.5">
                                 <span className="sr-only">DevToys</span>
                                 <Image
                                     className="h-8 w-auto"
@@ -136,7 +137,7 @@ function MainLayout({children}: Readonly<{
                                     height={38}
                                     priority
                                 />
-                            </a>
+                            </Link>
                             <button
                                 type="button"
                                 onClick={() => setMobileMenuOpen(false)}
