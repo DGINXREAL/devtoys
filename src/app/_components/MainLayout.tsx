@@ -54,8 +54,8 @@ function MainLayout({children}: Readonly<{
             <header className="relative isolate z-10 bg-gray-900">
                 <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
                     <div className="flex lg:flex-1">
-                        <a href="#" className="-m-1.5 p-1.5">
-                            <span className="sr-only">Your Company</span>
+                        <a href="/" className="-m-1.5 p-1.5">
+                            <span className="sr-only">DevToys</span>
                             <Image
                                 className="h-8 w-auto"
                                 src="/images/devtoys_logo_big.svg"
@@ -126,7 +126,7 @@ function MainLayout({children}: Readonly<{
                     <DialogPanel
                         className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
-                            <a href="#" className="-m-1.5 p-1.5">
+                            <a href="/" className="-m-1.5 p-1.5">
                                 <span className="sr-only">DevToys</span>
                                 <Image
                                     className="h-8 w-auto"
@@ -192,8 +192,8 @@ function MainLayout({children}: Readonly<{
             <main>{children}</main>
 
             <footer className="bg-gray-900 shadow-inner">
-                <div className="mx-auto max-w-7xl px-3 md:px-6 pb-8  lg:px-8">
-                    <div className="mt-16 pt-8 sm:mt-20 lg:mt-24 flex justify-between items-center gap-4">
+                <div className="mx-auto max-w-7xl px-3 md:px-6 pb-8 lg:px-8">
+                    <div className="mt-16 pt-8 sm:mt-20 lg:mt-24 flex flex-col md:flex-row justify-between items-center gap-4">
                         <OwnIpInfoWidget />
                         <p className="text-xs text-gray-400">&copy; 2024 DevToys, Inc. All rights reserved.</p>
                     </div>
