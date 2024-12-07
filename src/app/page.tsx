@@ -5,8 +5,8 @@ export default function Home() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
-          className="dark:invert"
-          src="/next.svg"
+          className=""
+          src="/images/devtoys_logo_big.svg"
           alt="Next.js logo"
           width={180}
           height={38}
@@ -58,7 +58,7 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/file.svg"
+            src="/images/devtoys_logo_big.svg"
             alt="File icon"
             width={16}
             height={16}

@@ -19,3 +19,8 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.btn {
+  @apply inline-flex w-full items-center gap-2 rounded-md bg-white/5 py-1.5 px-3 text-sm/6 font-semibold text-white  focus:outline-none data-[hover]:bg-white/10 data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white;
+}
