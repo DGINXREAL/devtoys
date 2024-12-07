@@ -97,7 +97,7 @@ function MainLayout({children}: Readonly<{
                         <button
                             type="button"
                             onClick={() => setMobileMenuOpen(true)}
-                            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 text-white"
+                            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
                         >
                             <span className="sr-only">Open main menu</span>
                             <Bars3Icon aria-hidden="true" className="size-6"/>
@@ -108,14 +108,14 @@ function MainLayout({children}: Readonly<{
                             <div key={navigationItem.name}>
                                 {navigationItem.items &&
                                     <Popover>
-                                        <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 text-white">
+                                        <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold  text-white">
                                             {navigationItem.name}
                                             <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400"/>
                                         </PopoverButton>
 
                                         <PopoverPanel
                                             transition
-                                            className="absolute inset-x-0 top-0 -z-10 bg-white bg-gray-900 pt-14 shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:-translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                                            className="absolute inset-x-0 top-0 -z-10 bg-gray-900 pt-14 ring-1 ring-gray-900/5 transition data-[closed]:-translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                                         >
                                             <div
                                                 className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
@@ -125,9 +125,9 @@ function MainLayout({children}: Readonly<{
                                                         <div
                                                             className="flex size-11 items-center justify-center rounded-lg bg-gray-700 group-hover:bg-white">
                                                             {subItem.icon && <subItem.icon aria-hidden="true"
-                                                                           className="size-6 text-gray-600 text-white group-hover:text-indigo-600"/>}
+                                                                           className="size-6  text-white group-hover:text-indigo-600"/>}
                                                         </div>
-                                                        <a href={subItem.href} className="mt-6 block font-semibold text-gray-900 text-white">
+                                                        <a href={subItem.href} className="mt-6 block font-semibold text-white">
                                                             {subItem.name}
                                                             <span className="absolute inset-0"/>
                                                         </a>
@@ -140,7 +140,7 @@ function MainLayout({children}: Readonly<{
                                 }
 
                                 {!navigationItem.items &&
-                                    <a href={navigationItem.href} className="text-sm/6 font-semibold text-gray-900 text-white">
+                                    <a href={navigationItem.href} className="text-sm/6 font-semibold text-white">
                                         {navigationItem.name}
                                     </a>
                                 }
@@ -151,7 +151,7 @@ function MainLayout({children}: Readonly<{
                 <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
                     <div className="fixed inset-0 z-10"/>
                     <DialogPanel
-                        className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white bg-gray-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                        className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
                             <a href="#" className="-m-1.5 p-1.5">
                                 <span className="sr-only">DevToys</span>
@@ -167,7 +167,7 @@ function MainLayout({children}: Readonly<{
                             <button
                                 type="button"
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="-m-2.5 rounded-md p-2.5 text-gray-700 text-white"
+                                className="-m-2.5 rounded-md p-2.5  text-white"
                             >
                                 <span className="sr-only">Close menu</span>
                                 <XMarkIcon aria-hidden="true" className="size-6"/>
@@ -181,7 +181,7 @@ function MainLayout({children}: Readonly<{
                                             {navigationItem.items &&
                                                 <Disclosure as="div" className="-mx-3">
                                                     <DisclosureButton
-                                                        className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 text-white hover:bg-gray-50">
+                                                        className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold  text-white hover:bg-gray-700">
                                                         {navigationItem.name}
                                                         <ChevronDownIcon aria-hidden="true"
                                                                          className="size-5 flex-none group-data-[open]:rotate-180"/>
@@ -192,7 +192,7 @@ function MainLayout({children}: Readonly<{
                                                                 key={subItem.name}
                                                                 as="a"
                                                                 href={subItem.href}
-                                                                className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 text-white hover:bg-gray-50 hover:bg-gray-700"
+                                                                className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold  text-white  hover:bg-gray-700"
                                                             >
                                                                 {subItem.name}
                                                             </DisclosureButton>
@@ -203,7 +203,7 @@ function MainLayout({children}: Readonly<{
 
                                             {!navigationItem.items &&
                                                 <a href={navigationItem.href}
-                                                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 text-white hover:bg-gray-700">
+                                                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-700">
                                                     {navigationItem.name}
                                                 </a>
                                             }
@@ -218,7 +218,7 @@ function MainLayout({children}: Readonly<{
 
             <main>{children}</main>
 
-            <footer className="bg-gray-900 shadow-2xl shadow-inner">
+            <footer className="bg-gray-900 shadow-inner">
                 <div className="mx-auto max-w-7xl px-6 pb-8  lg:px-8">
                     <div className="mt-16 pt-8 sm:mt-20 lg:mt-24 flex justify-between items-center">
                         <OwnIpInfoWidget />

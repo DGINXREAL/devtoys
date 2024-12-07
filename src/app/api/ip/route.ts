@@ -6,7 +6,7 @@ export async function GET(request: NextRequest) {
     if(ip){
         return NextResponse.json({
             status: "OK",
-            ip: ip
+            ip: ip.startsWith('::ffff:') ? ip.slice(7) : ip
         })
     }
 
