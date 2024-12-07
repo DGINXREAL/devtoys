@@ -205,7 +205,7 @@ const LoremIpsumGenerator = () => {
                             <h2 className="font-bold text-2xl mb-4">Actions</h2>
                             <div className="col-span-12 md:col-span-6">
 
-                                <div className="flex flex-row">
+                                <div className="flex flex-col gap-2">
                                     <Button className="btn"
                                             onClick={async () => copyToClipboard(generatedText)}>
                                         <FontAwesomeIcon icon={faCopy} className="h-5 w-5 text-white"/>

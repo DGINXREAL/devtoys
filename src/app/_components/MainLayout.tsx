@@ -14,18 +14,21 @@ import {
 import {
     Bars3Icon,
     XMarkIcon,
-    ChatBubbleBottomCenterTextIcon
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon} from '@heroicons/react/20/solid';
+import {ChevronDownIcon} from '@heroicons/react/20/solid';
 import Image from "next/image";
 import OwnIpInfoWidget from "@/app/_components/OwnIpInfoWidget";
 import {Route} from "@/app/_utils/routes";
 import Link from "next/link";
+import {faCommentDots, faDiamondTurnRight, faLink} from "@fortawesome/free-solid-svg-icons";
+import {IconDefinition} from "@fortawesome/fontawesome-svg-core";
+import {faHtml5} from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 interface NavigationItem {
     name: string;
     href: string;
-    icon?: React.ForwardRefExoticComponent<React.PropsWithoutRef<React.SVGProps<SVGSVGElement>> & { title?: string, titleId?: string } & React.RefAttributes<SVGSVGElement>>
+    icon?: IconDefinition
     description?: string;
     items?: NavigationItem[] | null | undefined
 }
@@ -37,9 +40,39 @@ const navigation: NavigationItem[] = [
         items: [
             {
                 name: 'Lorem Ipsum',
-                description: 'Use our Lorum Ipsum generator to make beautiful text examples',
+                description: 'Use our Lorem Ipsum generator to make beautiful text examples.',
                 href: Route.Tool_Text_Lorem_Ipsum,
-                icon: ChatBubbleBottomCenterTextIcon,
+                icon: faCommentDots,
+            }
+        ]
+    },
+    {
+        name: 'Server',
+        href: '#',
+        items: [
+            {
+                name: 'Redirect generator',
+                description: 'Convert your CSV Redirects to apaches htaccess or nginx redirect files.',
+                href: Route.Tool_Server_Redirect_Generator,
+                icon: faDiamondTurnRight,
+            }
+        ]
+    },
+    {
+        name: 'Encoder / Decoder',
+        href: '#',
+        items: [
+            {
+                name: 'HTML',
+                description: 'Encode and decode HTML Code.',
+                href: Route.Tool_Encoder_Decoder_Html,
+                icon: faHtml5,
+            },
+            {
+                name: 'URL',
+                description: 'Encode and decode URL`s.',
+                href: Route.Tool_Encoder_Decoder_Url,
+                icon: faLink,
             }
         ]
     },
@@ -98,8 +131,8 @@ function MainLayout({children}: Readonly<{
                                                          className="group relative rounded-lg p-6 text-sm/6 hover:bg-gray-800">
                                                         <div
                                                             className="flex size-11 items-center justify-center rounded-lg bg-gray-700 group-hover:bg-white">
-                                                            {subItem.icon && <subItem.icon aria-hidden="true"
-                                                                           className="size-6  text-white group-hover:text-indigo-600"/>}
+                                                            {subItem.icon && <FontAwesomeIcon icon={subItem.icon} aria-hidden="true"
+                                                                           className="size-6  text-white group-hover:text-buttercup-400"/>}
                                                         </div>
                                                         <a href={subItem.href} className="mt-6 block font-semibold text-white">
                                                             {subItem.name}
