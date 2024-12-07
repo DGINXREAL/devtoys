@@ -24,10 +24,10 @@ const ShowMore = ({ children, maxLines = 5 }: {children: React.ReactNode; maxLin
             </div>
             {!isExpanded && (
                 <div
-                    className="absolute bottom-0 z-20 left-0 w-full bg-gradient-to-t bg-opacity-80 backdrop-blur-sm from-black/90 to-transparent h-14 flex justify-center">
+                    className="absolute bottom-0  left-0 w-full bg-gradient-to-t bg-opacity-80 backdrop-blur-sm from-black/90 to-transparent h-14 flex justify-center">
                     <button
                         onClick={handleToggle}
-                        className="mt-2 z-10 px-4 py-2 text-buttercup-400 hover:underline"
+                        className="mt-2 z-30 px-4 py-2 text-buttercup-400 hover:underline"
                     >
                         Show More
                     </button>

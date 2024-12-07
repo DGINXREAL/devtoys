@@ -52,14 +52,14 @@ function OwnIpInfoWidget() {
 
 
     return (
-        <div>
+        <div className="text-xs">
             <span>
                 <strong className="me-2">Your IPv4:</strong>
                 {ipv4Loading && (
                     <FontAwesomeIcon icon={faSpinner} className="h-4" spin/>
                 )}
                 {!ipv4Loading && (
-                    <span onChange={() => copyToClipboard(ipv4!)}>{ipv4}</span>
+                    <span onClick={() => copyToClipboard(ipv4!)}>{ipv4}</span>
                 )}
             </span>
             <br/>
@@ -69,7 +69,7 @@ function OwnIpInfoWidget() {
                     <FontAwesomeIcon icon={faSpinner} className="h-4" spin/>
                 )}
                 {!ipv6Loading && (
-                    <span onChange={() => copyToClipboard(ipv6!)}>{ipv6}</span>
+                    <span onClick={() => copyToClipboard(ipv6!)}>{ipv6}</span>
                 )}
             </span>
         </div>

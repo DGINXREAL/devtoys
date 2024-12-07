@@ -13,15 +13,13 @@ import {
 } from '@headlessui/react'
 import {
     Bars3Icon,
-    ChartPieIcon,
-    CursorArrowRaysIcon,
-    FingerPrintIcon,
-    SquaresPlusIcon,
     XMarkIcon,
+    ChatBubbleBottomCenterTextIcon
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import { ChevronDownIcon} from '@heroicons/react/20/solid';
 import Image from "next/image";
 import OwnIpInfoWidget from "@/app/_components/OwnIpInfoWidget";
+import {Route} from "@/app/_utils/routes";
 
 interface NavigationItem {
     name: string;
@@ -33,42 +31,17 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
     {
-        name: 'Tools',
+        name: 'Text',
         href: '#',
         items: [
             {
-                name: 'Analytics',
-                description: 'Get a better understanding where your traffic is coming from',
-                href: '#',
-                icon: ChartPieIcon,
-            },
-            {
-                name: 'Engagement',
-                description: 'Speak directly to your customers with our engagement tool',
-                href: '#',
-                icon: CursorArrowRaysIcon,
-            },
-            { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-            {
-                name: 'Integrations',
-                description: 'Your customers’ data will be safe and secure',
-                href: '#',
-                icon: SquaresPlusIcon,
-            },
+                name: 'Lorem Ipsum',
+                description: 'Use our Lorum Ipsum generator to make beautiful text examples',
+                href: Route.Tool_Text_Lorem_Ipsum,
+                icon: ChatBubbleBottomCenterTextIcon,
+            }
         ]
     },
-    {
-        name: 'Features',
-        href: '#',
-    },
-    {
-        name: 'Marketplace',
-        href: '#',
-    },
-    {
-        name: 'Company',
-        href: '#',
-    }
 ]
 
 function MainLayout({children}: Readonly<{
@@ -219,11 +192,10 @@ function MainLayout({children}: Readonly<{
             <main>{children}</main>
 
             <footer className="bg-gray-900 shadow-inner">
-                <div className="mx-auto max-w-7xl px-6 pb-8  lg:px-8">
-                    <div className="mt-16 pt-8 sm:mt-20 lg:mt-24 flex justify-between items-center">
+                <div className="mx-auto max-w-7xl px-3 md:px-6 pb-8  lg:px-8">
+                    <div className="mt-16 pt-8 sm:mt-20 lg:mt-24 flex justify-between items-center gap-4">
                         <OwnIpInfoWidget />
-                        <p className="text-sm/6 text-gray-400">&copy; 2024 DevToys, Inc. All rights reserved.</p>
-
+                        <p className="text-xs text-gray-400">&copy; 2024 DevToys, Inc. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
